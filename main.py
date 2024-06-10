@@ -28,9 +28,9 @@ def main():
     imsize = im.size
     print(f'Input image size: ({imsize[0]}, {imsize[1]})')
 
-    if imsize[0] >800 or imsize[1] > 800:
+    if imsize[0] >500 or imsize[1] > 500:
         print('Downsampling image.')
-        im.thumbnail((800,800), Image.ANTIALIAS) # downsampling, aspect ratio stays the same
+        im.thumbnail((500, 500), Image.LANCZOS) # downsampling, aspect ratio stays the same
         imsize = im.size
         print(f'Image size after downsampling: ({imsize[0]}, {imsize[1]})')
     pix = im.load()
